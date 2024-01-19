@@ -5,7 +5,7 @@ import UIKit
 //          number of payments (month) as Int
 //          interest rate as Float
 // output:  monthly payment as Float
-func monthlyPayment(_ principal: Int, _ numOfPayment: Int, _ interestRate: Float) -> Float{
+func Payment(_ principal: Int, _ numOfPayment: Int, _ interestRate: Float) -> Float{
     // rate is casted to a decimal type for use in the pow(x:Decimal , y:Int) function
     let rate = Decimal(Double(interestRate))/1200
     // rPower created for use in amorization formula
@@ -23,5 +23,5 @@ func monthlyPayment(_ principal: Int, _ numOfPayment: Int, _ interestRate: Float
     return monthlyPaymentFloat
 }
 
-print(monthlyPayment(20000, 2, 4.4))
-print(monthlyPayment(150000, 360, 5))
+print(Payment(20000, 2, 4.4))
+print(Payment(150000, 360, 5))
